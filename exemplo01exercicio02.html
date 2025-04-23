@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplo01 - JavaScritp</title>
+    <link rel="shortcut icon" href="./assets/token_favicon.png" type="image/x-icon">
+</head>
+<body>
+    <h1>The curse vai ser broken💔💔</h1>
+    <p>Meu primeiro codigo JavaScritp.</p>
+
+    <p id="broken"> Esse é o resultado que você queria</p>
+
+    <script>
+        window.alert('Vamos fazer uma brincadeira')
+        let nomeUsuario = prompt('Qual é o seu Nome?');
+
+        let numUm = prompt('Digite o ano que voce esta');
+        let numDois = prompt('Agora digite o seu ano de nascimento');
+        
+        let numeroUm = Number(numUm)
+        let numeroDois = Number(numDois)
+
+        let result = numeroUm - numeroDois;
+
+        document.getElementById("broken").innerHTML = "Olá " +nomeUsuario+ " Após fazermos as contas, esta é sua idade : " + result;
+
+    </script>
+</body>
+</html>
