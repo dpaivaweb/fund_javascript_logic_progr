@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --clarencio: #fff;
+            --sumo: #000;
+            --tbd: #7d1ad4;
+            --bdb: #6e17b9;
+
+        }
+
+        * {
+
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--clarencio);
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            background-color: var(--sumo);
+            color: var(--tbd);
+            padding: 2rem;
+            border-radius: 1.8rem;
+        }
+
+        button {
+            background-color: var(--bdb);
+            padding: 0.4em;
+            border: none;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+
+        }
+
+        button:hover {
+            background-color: var(--bdb);
+            transition: 0.8s;
+        }
+
+        svg{
+            color:var(--clarencio) ;
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div>
+        <h1>Dia de Deploy</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quae praesentium nostrum nulla! Aperiam odit
+            illum
+            quam tempora laborum nihil accusantium delectus in, neque ad perferendis. Quam necessitatibus quae eaque.
+        </p>
+
+        <button id="btn-dark-mode"></button>
+    </div>
+
+</body>
+
+<script>
+const btnDarkMode = document.getElementByid('btn-dark-mode')
+const themeSystem = localStorage.getItem ('themeSystem') || 'light'
+
+btnDarkMode.addEventListener('click', () =>{
+let oldTheme = localStorage.getItem('themeSystem') ||'light'
+let newtheme = oldTheme =="light"? "dark":"light"
+localStorage.setItem('themeSystem', newTheme)
+defineCurrentTheme(newTheme)
+})
+
+function defineCurrentTheme(theme){
+const darkSvg = ""
+const lightSvg = ""
+document.documentElement.setAttribute("data-theme",theme)
+if(theme =="light"){
+    btnDarkMode.innerHTML = darkSvg
+    return
+}
+btnDarkModee.innerHTML = lightSvg
+}                                                        
+
+
+
+</script>
+
+</html>
