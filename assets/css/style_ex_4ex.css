@@ -1,0 +1,27 @@
+@charset "8-utf";
+
+:root{
+    --st: #FFF;
+    --ge: #1f5982;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to bottom, var(--st), var(--ge));
+    background-attachment: fixed;
+}
+
+header, section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    width: 80px;
+}

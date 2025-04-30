@@ -1,0 +1,66 @@
+@charset "8-utf";
+
+:root {
+    --fundo-claro: #fff;
+    --fundo-escuro: #000;
+    --botao-primario: #7d1ad4;
+    --botao-primario-hover: #6e17b9;
+    --texto-claro: #000;
+    --texto-escuro: #fff;
+}
+
+[data-theme="dark"] {
+    --fundo-claro: #000;
+    --fundo-escuro: #fff;
+    --texto-claro: #fff;
+    --texto-escuro: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: var(--fundo-claro);
+    color: var(--texto-claro);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    background-color: var(--fundo-escuro);
+    color: var(--texto-escuro);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 0.9rem;
+}
+
+button {
+    background-color: var(--botao-primario);
+    color: var(--texto-escuro);
+    padding: 0.4rem;
+    border: none;
+    border-radius: 6rem;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--botao-primario-hover);
+    transition: 0.8s;
+}
+
+svg {
+    color: var(--texto-claro);
+    /* Ajuste a cor do SVG conforme o tema */
+    width: 2.6em;
+    height: 2.6em;
+}

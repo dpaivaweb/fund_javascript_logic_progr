@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chamdelure</title>
-    <link rel="shortcut icon" href="../assets/lightbult_favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/lightbult_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style_ex_4ex.css">
 
-    <style>
-
-    </style>
 </head>
 
 <body>
@@ -19,36 +17,46 @@
 
     <section>
         <div>
-            <img src="../assets/lamp_off.jpeg" alt="lamp_off" id="lamp">
+            <img src="./assets/lamp_off.jpeg" alt="lamp_off" id="lamp">
         </div>
 
         <div>
-            <button id="turnOn">Vish</button>
-            <button id="turnOff">Mato eu pae</button>
+            <button id="turnOn">Ligar</button>
+            <button id="turnOff">Desligar</button>
         </div>
     </section>
 </body>
 
 <script>
-    const lamp = document.getElementById ("lamp");
-    const turnOn = document.getElementById ("turnOn");
-    const turnoOff = document.getElementById ("turnOff");
+    const turnOn = document.getElementById('turnOn');
+    const turnOff = document.getElementById('turnOff');
+    const lamp = document.getElementById('lamp');
 
-    function lampOn (){
-        if(!IsLampBroken ()) {
-            lamp.scr = "./img/lamp_on.jpg";
+    function isLampBroken() {
+        return lamp.src.indexOf('quebrada') > -1
+    }
+
+    function lampOn() {
+        if (!isLampBroken()) {
+            lamp.src = './assets/lamp_on.jpeg';
         }
     }
 
-    function lampOff (){
-        if(!IsLampBroken ()) {
-            lamp.scr = "./img/lamp_off.jpg";
+    function lampOff() {
+        if (!isLampBroken()) {
+            lamp.src = './assets/lamp_off.jpeg';
         }
     }
 
-    function IsLampBroken(){
-        return lamp.scr.indexOf ("quebrada") > -1
+    function lampBroken() {
+        lamp.src = './assets/lamp_broke.jpeg';
     }
+
+    turnOn.addEventListener('click', lampOn);
+    turnOff.addEventListener('click', lampOff);
+    // lamp.addEventListener('mouseover', lampOn);
+    // lamp.addEventListener('mouseleave', lampOff);
+    lamp.addEventListener('dblclick', lampBroken);
 </script>
 
 </html>
