@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamdelure</title>
+    <link rel="shortcut icon" href="../assets/lightbult_favicon.png" type="image/x-icon">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <H1>Lampada</H1>
+    </header>
+
+    <section>
+        <div>
+            <img src="../assets/lamp_off.jpeg" alt="lamp_off" id="lamp">
+        </div>
+
+        <div>
+            <button id="turnOn">Vish</button>
+            <button id="turnOff">Mato eu pae</button>
+        </div>
+    </section>
+</body>
+
+<script>
+    const lamp = document.getElementById ("lamp");
+    const turnOn = document.getElementById ("turnOn");
+    const turnoOff = document.getElementById ("turnOff");
+
+    function lampOn (){
+        if(!IsLampBroken ()) {
+            lamp.scr = "./img/lamp_on.jpg";
+        }
+    }
+
+    function lampOff (){
+        if(!IsLampBroken ()) {
+            lamp.scr = "./img/lamp_off.jpg";
+        }
+    }
+
+    function IsLampBroken(){
+        return lamp.scr.indexOf ("quebrada") > -1
+    }
+</script>
+
+</html>
