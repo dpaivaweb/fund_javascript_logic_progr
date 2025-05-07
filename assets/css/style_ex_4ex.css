@@ -1,27 +1,40 @@
 @charset "8-utf";
 
-:root{
+:root {
     --st: #FFF;
     --ge: #1f5982;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-image: linear-gradient(to bottom, var(--st), var(--ge));
     background-attachment: fixed;
 }
 
-header, section{
+header,
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-button{
+button {
     width: 80px;
 }
+
+img {
+    border: 1px solid #634d4d;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px #008cba80;
+}
+

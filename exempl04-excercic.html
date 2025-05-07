@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chamdelure</title>
-    <link rel="shortcut icon" href="./assets/lightbult_favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/pict/lightbult_favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style_ex_4ex.css">
 
 </head>
@@ -17,7 +17,7 @@
 
     <section>
         <div>
-            <img src="./assets/lamp_off.jpeg" alt="lamp_off" id="lamp">
+            <img src="./assets/pict/lamp_off.jpeg" alt="lamp_off" id="lamp">
         </div>
 
         <div>
@@ -26,6 +26,8 @@
         </div>
     </section>
 </body>
+
+<!-- <script src="/assets/js/script.js"></script> -->
 
 <script>
     const turnOn = document.getElementById('turnOn');
@@ -38,25 +40,25 @@
 
     function lampOn() {
         if (!isLampBroken()) {
-            lamp.src = './assets/lamp_on.jpeg';
+            lamp.src = './assets/pict/lamp_on.jpeg';
         }
     }
 
     function lampOff() {
         if (!isLampBroken()) {
-            lamp.src = './assets/lamp_off.jpeg';
+            lamp.src = './assets/pict/lamp_off.jpeg';
         }
     }
 
     function lampBroken() {
-        lamp.src = './assets/lamp_broke.jpeg';
+        lamp.src = './assets/pict/lamp_broke.jpeg';
     }
 
     turnOn.addEventListener('click', lampOn);
     turnOff.addEventListener('click', lampOff);
     // lamp.addEventListener('mouseover', lampOn);
     // lamp.addEventListener('mouseleave', lampOff);
-    lamp.addEventListener('dblclick', lampBroken);
+    lamp.addEventListener('dblclick', lampBroken);  
 </script>
 
 </html>
