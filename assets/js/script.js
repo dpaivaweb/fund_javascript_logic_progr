@@ -9,17 +9,17 @@ const hintText = document.querySelector(".hint-text b");
 /*let currentWord;
 let correctLetters = [];
 let wrongGuessCount;
-const maxGuesses = 6;*/ 
+const maxGuesses = 6;*/
 
-let currentWord,correctLetters,wrongGuessCount; 
+let currentWord, correctLetters, wrongGuessCount;
 const maxGuesses = 6;
 
 const resetGame = () => {
     correctLetters = [];
-      wrongGuessCount = 0;
+    wrongGuessCount = 0;
     hangmanImage.src = "./assets/image/hangman-0.svg";
     guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`;
-    wordDisplay.innerHTML = currentWord.split("").map(() => `<li class="letter"></li>`).join("");
+    wordDisplay.innerHTML = currentWord.split("").map(() => `<li class="letter"></li>`).join(""); 
     keyboardDiv.querySelectorAll("button").forEach(btn => btn.disabled = false);
     gameModal.classList.remove("show");
 }
